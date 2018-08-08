@@ -44,6 +44,6 @@
       </Label>
       <TextField fx:id="tdepartamento" layoutX="129.0" layoutY="309.0" />
       <Button layoutX="31.0" layoutY="382.0" mnemonicParsing="false" onAction="#agregarEmpleado" prefHeight="36.0" prefWidth="71.0" text="Agregar" />
-      <Button layoutX="204.0" layoutY="382.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="71.0" text="Guardar" />
+      <Button layoutX="204.0" layoutY="382.0" mnemonicParsing="false" onAction="#crearXML" prefHeight="36.0" prefWidth="71.0" text="Guardar" />
     </children>
 </AnchorPane>
