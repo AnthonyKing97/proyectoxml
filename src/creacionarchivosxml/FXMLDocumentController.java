@@ -20,7 +20,7 @@ import modelo.Empleado;
  * @author anthony.arce
  */
 public class FXMLDocumentController implements Initializable {
-    
+
     @FXML
     private Label lTitulo;
     @FXML
@@ -39,42 +39,37 @@ public class FXMLDocumentController implements Initializable {
     private TextField tdireccion;
     @FXML
     private TextField tedad;
-     @FXML
+    @FXML
     private TextField tcodigo;
-      @FXML
+    @FXML
     private TextField tdepartamento;
-    
-      LinkedList <Empleado> listaEmpleados;
-      
+
+    LinkedList<Empleado> listaEmpleados;
+
     @FXML
     private void agregarEmpleado(ActionEvent event) {
-        
-       String nombre = tnombre.getText();
-       String departamento= tdepartamento.getText();
-       int codigo = Integer.parseInt(tcodigo.getText());
-       int edad = Integer.parseInt(tedad.getText());
-       String direccion = tdireccion.getText();
-       
-        listaEmpleados.add(new Empleado(codigo,departamento,nombre,direccion,edad));
-        
+
+        String nombre = tnombre.getText();
+        String departamento = tdepartamento.getText();
+        int codigo = Integer.parseInt(tcodigo.getText());
+        int edad = Integer.parseInt(tedad.getText());
+        String direccion = tdireccion.getText();
+
+        listaEmpleados.add(new Empleado(codigo, departamento, nombre, direccion, edad));
 
     }
-    
-      @FXML
+
+    @FXML
     private void crearXML(ActionEvent event) {
         Empleado obj = new Empleado();
-        boolean guardar=obj.crearFileXML(listaEmpleados);
-       
-        
+        boolean guardar = obj.crearFileXML(listaEmpleados);
 
     }
-    
-    
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         listaEmpleados = new LinkedList<>();
-    }    
-    
+    }
+
 }
